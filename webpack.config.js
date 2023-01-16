@@ -3,7 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     
-    mode: "production",
+    mode: "development",
     entry: "./src/index.ts",
     
     output: {
@@ -82,14 +82,11 @@ module.exports = {
             },
             //图片处理
             {
-                test: /\.png|svg|jpg|gif|ico$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 1024*3,
-                        outputPath: 'image'
-                    }
-                }
+                test:/\.(jpg|png|gif|ico)$/,
+                type: 'asset',
+                generator:{
+                    filename:'asset/[name][ext]',
+                },
             }
         ]
     },

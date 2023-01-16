@@ -3,6 +3,7 @@ class Food{
 
     constructor() {
         this.element=document.getElementById('food')!
+        this.change()
     }
     get X(){
         return this.element.offsetLeft
