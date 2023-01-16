@@ -2,6 +2,8 @@
 
 练习webpack+TypeScript使用
 
+[在线试玩](https://crazy-snaker.netlify.app/)
+
 安装
 ```shell
 npm i
